@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "type": "template",
+  "course": {
+    "id": "asir2",
+    "name": "ASIR 2",
+    "description": "Administración de Sistemas Informáticos en Red · Turno vespertino",
+    "timeZone": "Europe/Madrid",
+    "subjects": [
+      {
+        "id": "aso",
+        "name": "ASO",
+        "short": "ASO",
+        "color": "#775a94"
+      },
+      {
+        "id": "sri",
+        "name": "SRI",
+        "short": "SRI",
+        "color": "#e9c90b"
+      },
+      {
+        "id": "seg",
+        "name": "SEG",
+        "short": "SEG",
+        "color": "#dc5a3d"
+      },
+      {
+        "id": "iaw",
+        "name": "IAW",
+        "short": "IAW",
+        "color": "#d95e39"
+      },
+      {
+        "id": "emp-ii",
+        "name": "EMP_II",
+        "short": "EMP_II",
+        "color": "#76ad72"
+      },
+      {
+        "id": "dig",
+        "name": "DIG",
+        "short": "DIG",
+        "color": "#ce243d"
+      },
+      {
+        "id": "sgbd",
+        "name": "SGBD",
+        "short": "SGBD",
+        "color": "#1189b8"
+      },
+      {
+        "id": "nube",
+        "name": "NUBE",
+        "short": "NUBE",
+        "color": "#dbbd08"
+      },
+      {
+        "id": "sost",
+        "name": "SOST",
+        "short": "SOST",
+        "color": "#1888ad"
+      }
+    ],
+    "week": {
+      "1": {
+        "start": 915,
+        "blocks": [
+          {
+            "id": "d1-c1",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "aso"
+          },
+          {
+            "id": "d1-b1",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d1-c2",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "aso"
+          },
+          {
+            "id": "d1-b2",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d1-c3",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sri"
+          },
+          {
+            "id": "d1-b3",
+            "kind": "break",
+            "duration": 20,
+            "label": "Recreo"
+          },
+          {
+            "id": "d1-c4",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sri"
+          },
+          {
+            "id": "d1-b4",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d1-c5",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "seg"
+          },
+          {
+            "id": "d1-b5",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d1-c6",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "seg"
+          }
+        ]
+      },
+      "2": {
+        "start": 915,
+        "blocks": [
+          {
+            "id": "d2-c1",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "aso"
+          },
+          {
+            "id": "d2-b1",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d2-c2",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "aso"
+          },
+          {
+            "id": "d2-b2",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d2-c3",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sri"
+          },
+          {
+            "id": "d2-b3",
+            "kind": "break",
+            "duration": 20,
+            "label": "Recreo"
+          },
+          {
+            "id": "d2-c4",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sri"
+          },
+          {
+            "id": "d2-b4",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d2-c5",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "iaw"
+          },
+          {
+            "id": "d2-b5",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d2-c6",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "iaw"
+          }
+        ]
+      },
+      "3": {
+        "start": 915,
+        "blocks": [
+          {
+            "id": "d3-c1",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "emp-ii"
+          },
+          {
+            "id": "d3-b1",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d3-c2",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "emp-ii"
+          },
+          {
+            "id": "d3-b2",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d3-c3",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "dig"
+          },
+          {
+            "id": "d3-b3",
+            "kind": "break",
+            "duration": 20,
+            "label": "Recreo"
+          },
+          {
+            "id": "d3-c4",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "aso"
+          },
+          {
+            "id": "d3-b4",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d3-c5",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "aso"
+          },
+          {
+            "id": "d3-b5",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d3-c6",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "seg"
+          }
+        ]
+      },
+      "4": {
+        "start": 915,
+        "blocks": [
+          {
+            "id": "d4-c1",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sgbd"
+          },
+          {
+            "id": "d4-b1",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d4-c2",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sgbd"
+          },
+          {
+            "id": "d4-b2",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d4-c3",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "seg"
+          },
+          {
+            "id": "d4-b3",
+            "kind": "break",
+            "duration": 20,
+            "label": "Recreo"
+          },
+          {
+            "id": "d4-c4",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sri"
+          },
+          {
+            "id": "d4-b4",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d4-c5",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sri"
+          },
+          {
+            "id": "d4-b5",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d4-c6",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "nube"
+          }
+        ]
+      },
+      "5": {
+        "start": 915,
+        "blocks": [
+          {
+            "id": "d5-c1",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "iaw"
+          },
+          {
+            "id": "d5-b1",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d5-c2",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "iaw"
+          },
+          {
+            "id": "d5-b2",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d5-c3",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "nube"
+          },
+          {
+            "id": "d5-b3",
+            "kind": "break",
+            "duration": 20,
+            "label": "Recreo"
+          },
+          {
+            "id": "d5-c4",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "nube"
+          },
+          {
+            "id": "d5-b4",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d5-c5",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sgbd"
+          },
+          {
+            "id": "d5-b5",
+            "kind": "break",
+            "duration": 5,
+            "label": "Descanso"
+          },
+          {
+            "id": "d5-c6",
+            "kind": "lesson",
+            "duration": 50,
+            "subjectId": "sost"
+          }
+        ]
+      }
+    },
+    "exceptions": {}
+  }
+}

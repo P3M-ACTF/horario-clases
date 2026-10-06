@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "id": "asir2",
+      "name": "ASIR 2",
+      "description": "Administración de Sistemas Informáticos en Red · Turno vespertino",
+      "tags": [
+        "Vespertino",
+        "L–V · 15:15–20:55"
+      ],
+      "file": "asir2.json"
+    }
+  ]
+}
