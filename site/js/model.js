@@ -1,6 +1,6 @@
 export const VERSION = 1;
 export const DAYS = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-export const COLORS = ['#7850a3', '#d4b526', '#447d48', '#167ea4', '#bf5336', '#c44d44', '#c22547', '#ab8c09', '#197d90'];
+export const COLORS = ['#775a94', '#e9c90b', '#76ad72', '#1189b8', '#d95e39', '#dc5a3d', '#ce243d', '#dbbd08', '#1888ad'];
 export const clone = value => structuredClone(value);
 export const uid = () => crypto.randomUUID();
 export const time = n => `${String(Math.floor(n / 60)).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
