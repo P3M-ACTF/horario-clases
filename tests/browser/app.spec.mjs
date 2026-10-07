@@ -15,7 +15,11 @@ test('empty welcome, catalog import, responsive weekly view and reload', async (
   await page.screenshot({ path: 'test-results/welcome.png', fullPage: true });
   await loadASIR(page);
   await expect(page.locator('.lesson')).toHaveCount(30);
+  await expect(page.locator('.time-label')).toHaveText(['15:15', '16:05', '16:10', '17:00', '17:05', '17:55', '18:15', '19:05', '19:10', '20:00', '20:05', '20:55']);
   await page.screenshot({ path: 'test-results/week.png', fullPage: true });
+  await page.getByRole('button', { name: 'Cambiar tema' }).click();
+  await page.screenshot({ path: 'test-results/week-dark.png', fullPage: true });
+  await page.getByRole('button', { name: 'Cambiar tema' }).click();
   await page.reload(); await expect(page.getByRole('heading', { name: 'ASIR 2', exact: true })).toBeVisible();
   expect(errors).toEqual([]);
 });
@@ -24,6 +28,8 @@ test('keyboard editor changes subjects, joins and separates breaks and swaps car
   await first(page).focus(); await page.keyboard.press('Enter');
   await page.getByRole('button', { name: 'Unir con la siguiente' }).click();
   await expect(page.locator('.lesson[data-date="2026-10-05"]').first()).toContainText('15:15 – 16:55');
+  await expect(page.locator('.time-label').filter({ hasText: /^16:55$/ })).toBeVisible();
+  await expect(page.locator('.time-label').filter({ hasText: /^15:30$/ })).toHaveCount(0);
   await page.locator('.lesson[data-date="2026-10-05"]').first().click();
   await page.getByRole('button', { name: 'Separar bloque' }).click();
   await expect(first(page)).toContainText('15:15 – 16:05');
