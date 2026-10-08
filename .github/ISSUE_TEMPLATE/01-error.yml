@@ -1,0 +1,65 @@
+name: Comunicar un error
+description: Algo no funciona como esperabas. Cuéntanos qué ha pasado para poder revisarlo.
+title: "[Error] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por ayudarnos a mejorar Mi horario. No hace falta usar términos técnicos.
+        Antes de empezar, puedes revisar si alguien ya ha comunicado [el mismo problema](https://github.com/P3M-ACTF/horario-clases/issues).
+        Este formulario será público: oculta nombres de profesores y otros datos personales en las capturas. No adjuntes copias personales de tus cursos.
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué ha pasado?
+      description: Explica el problema y, si aparece un mensaje de error, copia su texto.
+      placeholder: Al intentar mover una clase del lunes al martes…
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: ¿Cómo podemos reproducirlo?
+      description: Describe los pasos desde que abres la aplicación. Si solo ocurrió una vez, indícalo.
+      placeholder: |
+        1. Cargo la plantilla…
+        2. Entro en…
+        3. Pulso…
+    validations:
+      required: true
+  - type: textarea
+    id: resultado-esperado
+    attributes:
+      label: ¿Qué esperabas que ocurriera?
+      placeholder: Esperaba que la clase apareciera en…
+    validations:
+      required: true
+  - type: input
+    id: dispositivo
+    attributes:
+      label: Dispositivo y navegador
+      description: Indica lo que sepas; no necesitas buscar la versión exacta.
+      placeholder: Por ejemplo, móvil Android con Chrome u ordenador Windows con Edge.
+    validations:
+      required: true
+  - type: dropdown
+    id: modo
+    attributes:
+      label: ¿Cómo estabas usando Mi horario?
+      options:
+        - En una pestaña del navegador
+        - Como aplicación instalada
+        - No lo sé
+  - type: dropdown
+    id: conexion
+    attributes:
+      label: ¿Tenías conexión a internet?
+      options:
+        - Con conexión
+        - Sin conexión
+        - No lo sé
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Capturas o detalles adicionales
+      description: Opcional. Puedes añadir una captura sin datos personales e indicar la vista, la fecha consultada o la plantilla utilizada.

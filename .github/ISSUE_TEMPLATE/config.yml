@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Consultar la guía de Mi horario
+    url: https://github.com/P3M-ACTF/horario-clases#readme
+    about: Aprende a crear tu horario, guardar copias y utilizar la aplicación sin conexión.
+  - name: Abrir la aplicación
+    url: https://p3m-actf.github.io/horario-clases/
+    about: Consulta o edita tus cursos en Mi horario.

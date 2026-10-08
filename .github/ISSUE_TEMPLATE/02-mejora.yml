@@ -1,0 +1,34 @@
+name: Proponer una mejora
+description: Cuéntanos qué haría más útil o cómoda la aplicación para tus clases.
+title: "[Mejora] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nos interesa cómo usas tu horario en el día a día. Puedes proponer una idea sin saber cómo programarla.
+        Echa un vistazo a las [propuestas abiertas](https://github.com/P3M-ACTF/horario-clases/issues) por si quieres sumarte a alguna.
+  - type: textarea
+    id: necesidad
+    attributes:
+      label: ¿Qué necesitas hacer?
+      description: Describe una situación concreta en la que la aplicación podría ayudarte más.
+      placeholder: Cuando consulto el horario desde el móvil, me gustaría…
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: ¿Cómo te gustaría que funcionara?
+      description: Explica tu idea con tus palabras. Puedes añadir un ejemplo o un dibujo.
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: ¿Cómo lo resuelves ahora?
+      description: Opcional. Cuéntanos si utilizas otra opción de la aplicación o alguna solución fuera de ella.
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Algo más que debamos tener en cuenta
+      description: Opcional. Por ejemplo, si lo necesitas en móvil, al imprimir o al usar el teclado. Evita incluir datos personales.

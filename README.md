@@ -1,114 +1,160 @@
-# Mi horario
+<div align="center">
+  <a href="https://p3m-actf.github.io/horario-clases/">
+    <img src="site/icons/icon.svg" alt="" width="80" height="80">
+  </a>
+  <h1>Mi horario</h1>
+  <p>Tu semana de clases, a tu manera.<br>Organiza las asignaturas, consulta qué toca ahora y adapta los cambios del día.</p>
+  <p>
+    <a href="https://p3m-actf.github.io/horario-clases/"><strong>Abrir la aplicación</strong></a>
+    · <a href="https://github.com/P3M-ACTF/horario-clases/issues/new?template=01-error.yml">Comunicar un error</a>
+    · <a href="https://github.com/P3M-ACTF/horario-clases/issues/new?template=02-mejora.yml">Proponer una mejora</a>
+  </p>
+</div>
 
-Aplicación web para crear horarios de clase matutinos o vespertinos, con plantillas públicas, edición personal y funcionamiento sin conexión.
+[![Comprobaciones y publicación](https://github.com/P3M-ACTF/horario-clases/actions/workflows/pages.yml/badge.svg)](https://github.com/P3M-ACTF/horario-clases/actions/workflows/pages.yml)
 
-**Aplicación:** https://p3m-actf.github.io/horario-clases/
+<details>
+  <summary>Explora esta guía</summary>
 
-## Primeros pasos
+- [De un horario de clase a una herramienta compartida](#de-un-horario-de-clase-a-una-herramienta-compartida)
+- [Empieza con tu horario](#empieza-con-tu-horario)
+- [Cuando cambia la semana](#cuando-cambia-la-semana)
+- [Tus datos y tus copias](#tus-datos-y-tus-copias)
+- [Llévalo en el móvil](#llévalo-en-el-móvil)
+- [Comparte el horario de tu curso](#comparte-el-horario-de-tu-curso)
+- [Participa en el proyecto](#participa-en-el-proyecto)
+- [Cómo está hecha](#cómo-está-hecha)
 
-1. Elige **Crear desde cero**, carga una plantilla del catálogo o importa un JSON personalizado.
-2. Configura las asignaturas, sus colores y los profesores. Los profesores que añadas se guardan únicamente en tu navegador.
-3. Usa **Editar horario habitual** para construir la semana. Arrastra las asignaturas a los huecos; entre clases ocupadas de igual duración se intercambian las asignaciones.
-4. Pulsa una clase para elegir asignatura, profesor particular, destino compatible o unión con la siguiente. Todas las operaciones tienen controles utilizables con teclado.
-5. Para una sustitución o cancelación puntual, selecciona la fecha y **Editar solo esta fecha**. **Restaurar horario habitual** elimina esa excepción.
+</details>
 
-Puedes gestionar varios cursos independientes desde el selector superior. **Ajustar día** permite cambiar el inicio, las duraciones y los descansos. No existe una restricción a horarios de tarde: el creador propone las 08:00 y también ofrece un ajuste vespertino a las 15:15. Las jornadas deben acabar, como máximo, a medianoche.
+## De un horario de clase a una herramienta compartida
 
-### Unir clases y mover descansos
+Mi horario nació de una página para consultar las clases de ASIR 2. La idea es que también pueda servir a otros cursos: eliges una plantilla o creas tu semana, le das tus colores y la llevas contigo.
 
-Se pueden unir dos clases contiguas de la misma asignatura y profesor, aunque las separe uno o varios descansos. Los minutos de clase no cambian; los descansos interiores se colocan inmediatamente después del bloque conjunto. El resto de horas permanece igual.
+Funciona tanto para **clases de mañana como de tarde**, en móvil y ordenador. Puedes tener varios cursos independientes y configurar las asignaturas, los profesores, las horas y los descansos de cada uno.
 
-Ejemplo: dos clases de 15:15–16:05 y 16:10–17:00 se convierten en 15:15–16:55, con los 5 minutos desplazados a continuación. Si había otro descanso hasta las 17:05, ambos descansos se conservan. **Separar bloque** recupera la estructura anterior, incluidas las uniones anidadas. Para cambiar la duración de un bloque unido o de su descanso desplazado, sepáralo antes.
+Ya puedes:
 
-Las uniones son parte de la estructura de la jornada. Al intercambiar asignaturas entre bloques de igual duración, los descansos mantienen su posición. Cancelar una clase deja un hueco de la misma duración.
+- Consultar la **semana completa o un solo día**, con la clase actual y la siguiente a la vista.
+- Organizar las clases arrastrando sus tarjetas o usando los botones y el teclado.
+- Unir clases, ajustar descansos y preparar cambios para una fecha concreta.
+- Elegir tema claro u oscuro e imprimir el horario.
+- Instalar la aplicación y consultarla o editarla sin conexión tras la primera carga completa.
 
-## Plantillas públicas
+**No necesitas crear una cuenta.** Los horarios que personalices se guardan en el navegador de ese dispositivo.
 
-El índice `site/templates/index.json` registra los archivos de plantilla de esa misma carpeta. La aplicación descubre las entradas a través del índice; no hace falta modificar la interfaz.
+## Empieza con tu horario
 
-ASIR 2 incluye 30 clases, nueve asignaturas y el horario vespertino original de lunes a viernes, 15:15–20:55. No contiene nombres ni identificadores de profesores. La aplicación siempre empieza sin cursos personales hasta que crees o importes uno.
+1. **[Abre Mi horario](https://p3m-actf.github.io/horario-clases/).** Elige entre empezar desde cero, cargar una plantilla del catálogo o importar un archivo JSON compatible.
+2. **Hazlo tuyo.** Pon nombre al curso y configura las asignaturas, sus abreviaturas, colores y profesores habituales.
+3. **Construye tu semana.** En **Editar horario habitual**, coloca las asignaturas en sus huecos. Puedes intercambiar clases ocupadas cuando tienen la misma duración.
+4. **Ajusta las horas.** Con **Ajustar día** puedes cambiar el inicio, las duraciones y los descansos. El creador propone las 08:00 y ofrece también un ajuste de tarde a las 15:15.
+5. **Consulta lo que necesitas.** Cambia entre Semana y Día, navega por las fechas o vuelve a Hoy. En móvil se abre inicialmente la vista diaria.
 
-### Añadir una plantilla de otro curso
+El selector superior permite cambiar de curso, crear otro, renombrarlo, duplicarlo o eliminarlo. Los cambios se guardan automáticamente.
 
-1. Construye o importa el horario en la aplicación.
-2. Comprueba asignaturas, horas, descansos y descripción.
-3. Selecciona **Exportar horario → Exportar como plantilla**. El archivo excluye profesores y excepciones por fecha.
-4. Colócalo en `site/templates/`, con un nombre de archivo en minúsculas, por ejemplo `asir1-manana.json`.
-5. Añade una entrada al array `templates` del índice:
+> [!TIP]
+> Pulsa una clase para ver sus opciones. Desde ahí puedes cambiar la asignatura o el profesor de esa sesión, moverla a un destino compatible o unirla con la siguiente.
 
-```json
-{
-  "id": "asir1-manana",
-  "name": "ASIR 1 · Mañana",
-  "description": "Horario matutino de primer curso",
-  "tags": ["Matutino", "L–V · 08:00–13:40"],
-  "file": "asir1-manana.json"
-}
-```
+## Cuando cambia la semana
 
-`name` debe coincidir con el nombre del curso dentro de la plantilla. No inventes centro ni curso académico; puedes incluirlos en la descripción cuando estén confirmados. Revisa también los textos libres antes de publicar. No incluyas el HTML original ni archivos personales.
+### Una sustitución o una clase cancelada
 
-6. Ejecuta `npm test`, `npm run validate` y `npm run build`. La validación rechaza formatos incorrectos, identificadores duplicados, archivos sin registrar, profesores y excepciones en plantillas públicas.
-7. Publica el cambio en `main` o envía una pull request. GitHub Actions valida y despliega el catálogo junto con la aplicación.
+Selecciona el día y pulsa **Editar solo esta fecha**. La aplicación crea una copia de esa jornada para que puedas cambiarla sin alterar el horario habitual ni otras semanas.
 
-Los cursos ya cargados no se actualizan automáticamente: cada alumno conserva su copia. Puede volver a cargar una plantilla actualizada como un curso adicional.
+Si cancelas una clase, queda un hueco: las siguientes mantienen su hora. **Restaurar horario habitual** elimina los cambios de esa fecha.
 
-### Importar y guardar copias
+### Dos clases seguidas y un descanso en medio
 
-- **Plantilla:** un curso semanal, sin profesores ni excepciones; apropiado para compartir.
-- **Copia personal de este curso:** incluye profesores y cambios por fecha.
-- **Copia de todos mis cursos:** permite trasladar todos los cursos entre dispositivos.
+Puedes unir bloques de la misma asignatura y profesor, incluso si hay descansos entre ellos. El tiempo de clase se conserva y los descansos interiores pasan al final del bloque unido.
 
-La importación muestra un resumen y siempre añade copias independientes. No reemplaza cursos existentes. Máximo: 5 MB por archivo y 50 cursos guardados. Los datos se guardan en `localStorage`, con una copia anterior válida para recuperación. Borrar los datos del navegador, cambiar de perfil o usar otro dispositivo no conserva automáticamente esos datos: exporta copias periódicas. Si se agota el almacenamiento, la app mantiene los cambios en memoria y muestra una opción para reintentar el guardado; exporta antes de cerrarla.
+| Antes | Después de unir |
+| :--- | :--- |
+| Clase de 15:15 a 16:05<br>Descanso de 16:05 a 16:10<br>Clase de 16:10 a 17:00 | Clase conjunta de 15:15 a 16:55<br>Descanso de 16:55 a 17:00 |
 
-## Instalar y usar sin conexión
+**Separar bloque** recupera la estructura anterior. Si había otro descanso después, también se conserva.
 
-La instalación depende del navegador. En Chrome/Edge utiliza **Instalar app** o el menú del navegador. En Safari para iPhone: **Compartir → Añadir a la pantalla de inicio**.
+<details>
+  <summary>Algunos detalles al ajustar la jornada</summary>
 
-Una primera carga completa guarda la aplicación y todas las plantillas del catálogo para funcionar sin conexión. No se necesitan cuentas, servidor de datos, fuentes remotas ni servicios de pago. Cuando hay una versión nueva aparece **Actualizar**; la actualización conserva el almacenamiento personal. El navegador puede liberar su almacenamiento, por lo que la caché y el guardado no sustituyen una copia exportada.
+- Se pueden deshacer también las uniones realizadas sobre otros bloques unidos.
+- Antes de cambiar la duración de un bloque unido o de su descanso desplazado, separa el bloque.
+- Intercambiar asignaturas entre bloques de igual duración mantiene los descansos en su sitio.
+- Las jornadas deben terminar, como máximo, a medianoche.
+- Una excepción es una copia de ese día: los cambios posteriores en la estructura semanal no la modifican. Los cambios en las asignaturas sí se reflejan en sus clases.
 
-## Desarrollo y comprobación
+</details>
 
-Requiere Node.js 22 o posterior. La aplicación publicada no tiene dependencias de ejecución. Playwright solo se usa en las pruebas de desarrollo.
+## Tus datos y tus copias
+
+Los profesores y los cambios personales que añadas se quedan en tu navegador. Cargar una plantilla crea un curso independiente: puedes modificarlo sin cambiar el catálogo, y las futuras actualizaciones del catálogo no sobrescriben tu copia.
+
+En **Exportar horario** puedes elegir qué quieres guardar:
+
+| Quiero… | Qué exportar |
+| :--- | :--- |
+| Compartir mi semana con otros alumnos | **Exportar como plantilla**: excluye profesores y cambios de fechas concretas. |
+| Guardar un curso con todos sus detalles | **Copia personal de este curso**: incluye profesores y excepciones. |
+| Llevar mis horarios a otro dispositivo | **Copia de todos mis cursos** y después importar allí el archivo. |
+
+Al importar verás un resumen antes de confirmar. Se añaden copias independientes, sin reemplazar los cursos que ya tienes. Se admiten archivos de hasta 5 MB y un máximo de 50 cursos guardados.
+
+> [!IMPORTANT]
+> Los datos no se sincronizan entre dispositivos. Antes de borrar los datos del navegador o cambiar de equipo, exporta una copia personal. El guardado automático y el modo sin conexión no sustituyen esa copia.
+
+La aplicación conserva una copia anterior válida para recuperarse de un fallo de lectura. Si no puede guardar, te avisa y permite reintentarlo; en ese caso, exporta tus cambios antes de cerrar.
+
+## Llévalo en el móvil
+
+Abre la aplicación con conexión y deja que termine de cargar. Así estarán disponibles también el catálogo y sus plantillas cuando estés sin internet.
+
+- **Chrome o Edge:** utiliza **Instalar app**, cuando aparezca, o la opción de instalación del navegador.
+- **Safari en iPhone:** entra en **Compartir → Añadir a la pantalla de inicio**.
+
+Cuando haya una versión nueva aparecerá **Actualizar**. La actualización conserva tus cursos. También puedes seguir utilizando la web sin instalarla.
+
+El enlace que puedes guardar y compartir es **[p3m-actf.github.io/horario-clases](https://p3m-actf.github.io/horario-clases/)**. Si se añade un dominio propio como acceso, esta dirección seguirá siendo la de uso habitual.
+
+## Comparte el horario de tu curso
+
+La primera plantilla del catálogo es **ASIR 2**, de turno vespertino: 30 clases, nueve asignaturas y jornadas de lunes a viernes, de 15:15 a 20:55. Se publica sin nombres ni identificadores de profesores.
+
+¿Quieres que aparezca también tu curso? Prepara el horario en la aplicación, comprueba las horas y los descansos y elige **Exportar como plantilla**. Después puedes [proponer la plantilla con este formulario](https://github.com/P3M-ACTF/horario-clases/issues/new?template=03-plantilla.yml) o enviar una propuesta de cambios al repositorio (*pull request*).
+
+Revisa el nombre y la descripción antes de compartir el archivo: esos textos también serán públicos. Usa la exportación como plantilla para el catálogo y reserva las copias personales para ti.
+
+La [guía para añadir plantillas](docs/plantillas.md) explica cómo registrar el archivo y comprobarlo antes de publicarlo. Añadir un nuevo curso al catálogo no requiere cambiar la interfaz.
+
+## Participa en el proyecto
+
+No hace falta saber programar para ayudar. Puedes contarnos qué te ha fallado, qué te facilitaría consultar las clases o qué horario falta en el catálogo:
+
+- **[Comunicar un error](https://github.com/P3M-ACTF/horario-clases/issues/new?template=01-error.yml):** explica qué estabas haciendo y qué ocurrió.
+- **[Proponer una mejora](https://github.com/P3M-ACTF/horario-clases/issues/new?template=02-mejora.yml):** cuéntanos qué necesitas y en qué situación te ayudaría.
+- **[Aportar o corregir una plantilla](https://github.com/P3M-ACTF/horario-clases/issues/new?template=03-plantilla.yml):** comparte un nuevo horario o indica qué habría que corregir.
+
+Los formularios están en castellano y te guían paso a paso. Puedes consultar antes las [conversaciones abiertas](https://github.com/P3M-ACTF/horario-clases/issues) para añadir información si alguien ya ha comentado lo mismo. Para publicar una propuesta necesitarás una cuenta de GitHub.
+
+## Cómo está hecha
+
+| Parte | Tecnología | Para qué se utiliza |
+| :--- | :--- | :--- |
+| Interfaz | HTML, CSS y JavaScript modular | Mostrar y editar los horarios en el navegador. |
+| Guardado | Almacenamiento local del navegador (`localStorage`) | Conservar los cursos y una copia anterior válida. |
+| Instalación y uso sin conexión | Manifiesto web y *service worker* | Guardar la aplicación y el catálogo en el dispositivo. |
+| Comprobaciones | Node.js y Playwright | Probar los cálculos y el funcionamiento en el navegador. |
+| Publicación | GitHub Actions y GitHub Pages | Comprobar los cambios y servir la web. |
+
+La aplicación funciona sin servidor de datos ni dependencias externas durante el uso.
+
+Para trabajar en ella necesitas **Node.js 22 o posterior**:
 
 ```sh
+git clone https://github.com/P3M-ACTF/horario-clases.git
+cd horario-clases
 npm ci
-npm test
-npm run validate
 npm run build
 npm start
 ```
 
-Abre `http://127.0.0.1:4173/horario-clases/`. No abras `index.html` directamente desde el disco: los módulos y el modo sin conexión requieren HTTP/HTTPS.
-
-```sh
-# En Linux/macOS, preparar Chromium para las pruebas:
-npx playwright install --with-deps chromium
-npx playwright test
-```
-
-En Windows, las pruebas utilizan Microsoft Edge instalado. Los resultados y capturas se guardan en `test-results/`, fuera de Git.
-
-La compilación genera `dist/`, los iconos PNG y el service worker. La versión de caché se deriva de todo el contenido de la aplicación y las plantillas, por lo que cada cambio produce una versión coherente y renovable.
-
-### Formato de archivos, versión 1
-
-Plantilla: `{ "schemaVersion": 1, "type": "template", "course": { ... } }`.
-
-Copia personal: `{ "schemaVersion": 1, "type": "backup", "courses": [ ... ] }`.
-
-Un curso tiene `id`, `name`, `description`, `timeZone`, `subjects`, `week` y `exceptions`. Las asignaturas tienen `id`, `name`, `short`, `color` hexadecimal y `teacher` opcional. Las claves de `week` son los días de JavaScript: `0` domingo, `1` lunes, hasta `6` sábado. Las excepciones se identifican mediante `AAAA-MM-DD`.
-
-Cada jornada tiene `start` (minutos desde medianoche) y `blocks` ordenados. Cada bloque tiene `id`, `kind` (`lesson`, `break` o `free`) y `duration` en minutos. Las clases añaden `subjectId` (o `null` si el hueco está vacío) y `teacherOverride` opcional. Los descansos pueden tener `label`. `merge.original` y `movedBy` guardan la estructura necesaria para deshacer uniones; se recomienda generarlos con la aplicación.
-
-Los intervalos incluyen el inicio y excluyen el final. El cálculo de «Ahora» utiliza la zona horaria del curso; las excepciones tienen prioridad sobre la semana habitual. Cambiar la estructura semanal no modifica las excepciones ya creadas, aunque los cambios en el catálogo de asignaturas sí se reflejan en sus clases.
-
-## GitHub Pages y dominio de un año
-
-El repositorio público publica `dist/` mediante `.github/workflows/pages.yml` después de pasar las pruebas. En **Settings → Pages**, la fuente debe ser **GitHub Actions**. Las rutas relativas y el alcance del service worker están preparados para `/horario-clases/`.
-
-La dirección permanente es **https://p3m-actf.github.io/horario-clases/**. Al comprar un dominio, contrata o habilita en su proveedor una **redirección web HTTPS (302) hacia esa dirección completa**, conservando `github.io` como dirección visible. Una entrada DNS por sí sola no hace una redirección HTTP. No configures el dominio comprado como *Custom domain* de este repositorio y no uses redirección enmarcada.
-
-Antes de comprarlo, comprueba que su proveedor permite esa redirección HTTPS. Cuando no renueves el dominio, la app seguirá en el mismo enlace de GitHub Pages y los datos conservarán su origen. Actualiza tus marcadores al enlace permanente antes de que caduque. No se necesita una migración del horario por ese vencimiento.
-
-Documentación: [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), [publicación con Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Después abre [la aplicación local](http://127.0.0.1:4173/horario-clases/). La [guía de desarrollo y publicación](docs/desarrollo.md) incluye las pruebas, el formato de archivos, la configuración de GitHub Pages y la redirección desde un dominio temporal.

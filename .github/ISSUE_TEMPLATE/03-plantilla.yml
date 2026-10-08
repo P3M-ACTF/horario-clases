@@ -1,0 +1,52 @@
+name: Aportar o corregir una plantilla
+description: Propón el horario de otro curso o avisa de un dato incorrecto en el catálogo.
+title: "[Plantilla] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ayúdanos a ampliar y mantener el catálogo para cursos de mañana y de tarde.
+        Para compartir un horario, usa **Exportar horario → Exportar como plantilla** en la aplicación.
+        La propuesta será pública. No incluyas copias personales, el HTML original ni nombres o identificadores de profesores, tampoco en descripciones o capturas.
+        Puedes consultar la [guía para compartir plantillas](https://github.com/P3M-ACTF/horario-clases/blob/main/docs/plantillas.md).
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: ¿Qué quieres proponer?
+      options:
+        - Añadir una plantilla nueva
+        - Corregir una plantilla existente
+    validations:
+      required: true
+  - type: input
+    id: curso
+    attributes:
+      label: Nombre del curso o de la plantilla
+      placeholder: Por ejemplo, ASIR 1 · Mañana.
+    validations:
+      required: true
+  - type: input
+    id: horario
+    attributes:
+      label: Días y horario general
+      placeholder: Por ejemplo, de lunes a viernes, de 08:00 a 13:40.
+    validations:
+      required: true
+  - type: input
+    id: centro-periodo
+    attributes:
+      label: Centro o curso académico, si procede
+      description: Opcional. Incluye esta información solo si está confirmada y ayuda a identificar el horario.
+  - type: textarea
+    id: detalles
+    attributes:
+      label: Descripción de la propuesta o de la corrección
+      description: Si hay un error, indica el día, la hora, el dato actual y cómo debería quedar. Puedes comunicarlo aunque no tengas un archivo preparado.
+    validations:
+      required: true
+  - type: textarea
+    id: plantilla
+    attributes:
+      label: Plantilla para revisar
+      description: Opcional. Pega el contenido del JSON obtenido con «Exportar como plantilla» o enlaza una propuesta de cambios del repositorio. Revisa también los textos libres antes de compartirlo.
+      render: json
