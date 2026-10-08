@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-only
+ * Copyright (c) 2026 P3M-ACTF and contributors.
+ * License: https://github.com/P3M-ACTF/horario-clases/blob/main/LICENSE
+ */
 import { DAYS, COLORS, clone, uid, time, minutes, weekday, monday, addDays, dateLabel, nowInZone, timeline, visibleTimeline, endOfDay, effectiveDay, ensureException, makeDay, makeCourse, teacherFor, assign, swapAssignments, mergeNext, splitBlock, validateState, validateDay, publicTemplate, backup, parseImport, importCopy, subjectUsage, removeSubject, statusAt } from './model.js';
 import { loadState, saveState, KEY } from './storage.js';
 

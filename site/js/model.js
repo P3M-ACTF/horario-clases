@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-only
+ * Copyright (c) 2026 P3M-ACTF and contributors.
+ * License: https://github.com/P3M-ACTF/horario-clases/blob/main/LICENSE
+ */
 export const VERSION = 1;
 export const DAYS = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 export const COLORS = ['#775a94', '#e9c90b', '#76ad72', '#1189b8', '#d95e39', '#dc5a3d', '#ce243d', '#dbbd08', '#1888ad'];

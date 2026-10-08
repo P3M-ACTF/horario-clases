@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-only
+ * Copyright (c) 2026 P3M-ACTF and contributors.
+ * License: https://github.com/P3M-ACTF/horario-clases/blob/main/LICENSE
+ */
 import { validateState, clone, VERSION } from './model.js';
 export const KEY = 'mi-horario:v1';
 export const BACKUP_KEY = `${KEY}:last-good`;

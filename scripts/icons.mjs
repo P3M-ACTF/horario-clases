@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-only
+ * Copyright (c) 2026 P3M-ACTF and contributors.
+ * License: https://github.com/P3M-ACTF/horario-clases/blob/main/LICENSE
+ */
 import { deflateSync } from 'node:zlib';
 // Small original calendar icon, generated locally; no fonts or remote assets.
 function crc32(buffer) { let crc = 0xffffffff; for (const byte of buffer) { crc ^= byte; for (let i = 0; i < 8; i++) crc = (crc >>> 1) ^ (0xedb88320 & -(crc & 1)); } return (crc ^ 0xffffffff) >>> 0; }

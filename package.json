@@ -2,6 +2,7 @@
   "name": "mi-horario",
   "version": "1.0.0",
   "private": true,
+  "license": "GPL-3.0-only",
   "type": "module",
   "description": "Horarios de clase personales, instalables y sin conexión",
   "scripts": {

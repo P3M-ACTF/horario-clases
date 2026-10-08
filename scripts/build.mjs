@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-only
+ * Copyright (c) 2026 P3M-ACTF and contributors.
+ * License: https://github.com/P3M-ACTF/horario-clases/blob/main/LICENSE
+ */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -9,6 +14,8 @@ const source = path.join(root, 'site'), destination = path.join(root, 'dist');
 if (destination !== path.resolve(root, 'dist')) throw new Error('Destino de compilación incorrecto.');
 await fs.rm(destination, { recursive: true, force: true });
 await fs.cp(source, destination, { recursive: true });
+// Keep the code license and scope notice with every published/offline copy.
+for (const file of ['LICENSE', 'LICENSING.md']) await fs.copyFile(path.join(root, file), path.join(destination, file));
 for (const size of [192, 512]) await fs.writeFile(path.join(destination, 'icons', `icon-${size}.png`), pngIcon(size));
 await fs.writeFile(path.join(destination, '.nojekyll'), '');
 async function walk(folder, prefix = '') { let out = []; for (const entry of await fs.readdir(folder, { withFileTypes: true })) { const relative = prefix + entry.name; if (entry.isDirectory()) out.push(...await walk(path.join(folder, entry.name), relative + '/')); else out.push(relative); } return out.sort(); }

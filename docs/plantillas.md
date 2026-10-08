@@ -6,6 +6,12 @@ El índice [`site/templates/index.json`](../site/templates/index.json) registra 
 
 ASIR 2 incluye 30 clases, nueve asignaturas y el horario vespertino original de lunes a viernes, 15:15–20:55. No contiene nombres ni identificadores de profesores. La aplicación siempre empieza sin cursos personales hasta que crees o importes uno.
 
+## Licencia y autoría de las aportaciones
+
+El catálogo se publica bajo [CC BY-SA 4.0](../site/templates/LICENSE). Al proponer una nueva plantilla, indica que autorizas su publicación bajo esa licencia y qué nombre o seudónimo debe figurar en los [créditos](../site/templates/README.md). Aporta material propio o que tengas permiso para compartir bajo esas condiciones; si adaptas una plantilla existente, conserva su atribución e indica los cambios.
+
+Añade también la nueva plantilla a la tabla de créditos. Para compartir después un JSON fuera del repositorio, acompáñalo de sus créditos y del enlace a la licencia, como explica el aviso del catálogo. Exportar el archivo desde la aplicación no añade automáticamente esos avisos al JSON.
+
 ## Añadir una plantilla de otro curso
 
 1. Construye o importa el horario en la aplicación.

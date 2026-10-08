@@ -24,6 +24,7 @@
 - [Comparte el horario de tu curso](#comparte-el-horario-de-tu-curso)
 - [Participa en el proyecto](#participa-en-el-proyecto)
 - [Cómo está hecha](#cómo-está-hecha)
+- [Licencias](#licencias)
 
 </details>
 
@@ -158,3 +159,16 @@ npm start
 ```
 
 Después abre [la aplicación local](http://127.0.0.1:4173/horario-clases/). La [guía de desarrollo y publicación](docs/desarrollo.md) incluye las pruebas, el formato de archivos, la configuración de GitHub Pages y la redirección desde un dominio temporal.
+
+## Licencias
+
+Puedes reutilizar y mejorar Mi horario. En este mismo repositorio conviven dos licencias, cada una para una parte del proyecto:
+
+| Qué quieres reutilizar | Licencia |
+| :--- | :--- |
+| El código de la aplicación y sus archivos de soporte | [GPL-3.0](LICENSE), versión 3 únicamente. |
+| Las plantillas públicas y el índice del catálogo | [CC BY-SA 4.0](site/templates/LICENSE). |
+
+Si distribuyes una versión modificada del programa, debes facilitar su código fuente correspondiente bajo GPL-3.0. Si compartes una adaptación de una plantilla, reconoce la autoría, indica los cambios y respeta CompartirIgual. Ambas licencias permiten el uso comercial.
+
+Consulta el [alcance de las licencias](LICENSING.md) y los [créditos de las plantillas](site/templates/README.md). Tus horarios personales siguen guardados en tu dispositivo; estas licencias no los hacen públicos.

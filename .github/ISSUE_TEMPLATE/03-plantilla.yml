@@ -9,6 +9,7 @@ body:
         Para compartir un horario, usa **Exportar horario → Exportar como plantilla** en la aplicación.
         La propuesta será pública. No incluyas copias personales, el HTML original ni nombres o identificadores de profesores, tampoco en descripciones o capturas.
         Puedes consultar la [guía para compartir plantillas](https://github.com/P3M-ACTF/horario-clases/blob/main/docs/plantillas.md).
+        Las plantillas del catálogo se publican bajo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es), que permite compartirlas y adaptarlas, también comercialmente, con atribución y CompartirIgual.
   - type: dropdown
     id: tipo
     attributes:
@@ -50,3 +51,9 @@ body:
       label: Plantilla para revisar
       description: Opcional. Pega el contenido del JSON obtenido con «Exportar como plantilla» o enlaza una propuesta de cambios del repositorio. Revisa también los textos libres antes de compartirlo.
       render: json
+  - type: textarea
+    id: autoria-licencia
+    attributes:
+      label: Autoría y permiso para compartir
+      description: Si aportas una plantilla, indica el nombre o seudónimo para los créditos, su procedencia y que autorizas su publicación bajo CC BY-SA 4.0. Si es una adaptación, conserva los créditos anteriores. Puedes dejarlo vacío si solo comunicas un error.
+      placeholder: He creado esta plantilla y autorizo su publicación bajo CC BY-SA 4.0. Para los créditos, utiliza…

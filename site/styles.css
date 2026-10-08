@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-only
+ * Copyright (c) 2026 P3M-ACTF and contributors.
+ * License: https://github.com/P3M-ACTF/horario-clases/blob/main/LICENSE
+ */
 @layer base, components, responsive;
 @layer base {
   :root { color-scheme: light; --bg:#f6f7f2; --surface:#fff; --ink:#20342e; --muted:#64716a; --line:#dce2d8; --accent:#274e3b; --accent-ink:#fff; --soft:#eaf0e3; --yellow:#eef0ba; --danger:#a43237; --shadow:0 16px 48px #20342e0b; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
